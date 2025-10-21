@@ -137,7 +137,7 @@ namespace MalbersAnimations.Weapons
             if (rb)
             {
                 rb.isKinematic = false; //IMPORTANT!!!
-                rb.velocity = Vector3.zero; //Reset the velocity IMPORTANT!
+                rb.linearVelocity = Vector3.zero; //Reset the velocity IMPORTANT!
 
                 rb.AddForce(Velocity, ForceMode.VelocityChange);
 

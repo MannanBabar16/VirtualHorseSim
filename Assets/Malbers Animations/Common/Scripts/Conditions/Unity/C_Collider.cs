@@ -19,7 +19,7 @@ namespace MalbersAnimations.Conditions
         [Hide("showValue", true,false)]
         public Collider Value;
         [Hide("showMat", true,false)]
-        public PhysicMaterial Material;
+        public PhysicsMaterial Material;
         [Hide("showMask", true, false)]
         public LayerMask Mask;
          
