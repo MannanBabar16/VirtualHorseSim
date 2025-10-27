@@ -1,8 +1,5 @@
 fileFormatVersion: 2
-guid: 3bccc2939076d4c2da53e83afc9e9ee1
-labels:
-- al_max
-- al_max_export_path-MaxSdk/Mediation/Yandex
+guid: 4ae2b2517f2bb48179d3aa2dd04f7986
 folderAsset: yes
 DefaultImporter:
   externalObjects: {}

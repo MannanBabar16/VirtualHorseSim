@@ -1,4 +1,5 @@
 using DG.Tweening;
+using MangoMango.Advertisement;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
@@ -66,9 +67,9 @@ public class ModeLevelSelection : MonoBehaviour
             LoadingScreen.gameObject.SetActive(true);
         }
         Button_Click();
-        if (AdsManager.instance)
+        if (ApplovinAdManager.Instance)
         {
-            AdsManager.instance.Show_AdMob_Interstitial();
+            ApplovinAdManager.Instance.ShowInterstitial(RCBool.InterstitialCheckAll);
         }
     }
 

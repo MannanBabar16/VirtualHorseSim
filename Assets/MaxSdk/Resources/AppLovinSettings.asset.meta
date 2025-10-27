@@ -1,8 +1,5 @@
 fileFormatVersion: 2
-guid: f070178b56084df45961fb8d8eadfe72
-labels:
-- al_max
-- al_max_export_path-MaxSdk/Resources/AppLovinSettings.asset
+guid: bb5a55987ba6fa14592a65feef51c252
 NativeFormatImporter:
   externalObjects: {}
   mainObjectFileID: 11400000

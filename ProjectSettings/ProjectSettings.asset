@@ -949,7 +949,7 @@ PlayerSettings:
     Purchasing: 0
     UDP: 0
     UNet: 1
-    Unity Ads: 1
+    Unity Ads: 0
   luminIcon:
     m_Name: 
     m_ModelFolderPath: 
@@ -971,10 +971,10 @@ PlayerSettings:
   captureStartupLogs: {}
   activeInputHandler: 0
   windowsGamepadBackendHint: 0
-  cloudProjectId: 7102be1b-7615-4aad-ba81-8bfd48335d67
+  cloudProjectId: 797b08c1-c04c-4ab5-9c6a-0e6ee64056ef
   framebufferDepthMemorylessMode: 0
   qualitySettingsNames: []
-  projectName: (Redlight) Virtual Horse Simulator
+  projectName: '(Updated) (Dev Ahmad) (Andriod) Virtual horse simulation game '
   organizationId: games-red-light
   cloudEnabled: 0
   legacyClampBlendShapeWeights: 0
