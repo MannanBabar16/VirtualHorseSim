@@ -37,7 +37,6 @@ public class LoadingScreen : MonoBehaviour
         float animTime = gameObject.GetComponent<Animator>().GetCurrentAnimatorStateInfo(0).normalizedTime;
         if(animTime <= 1)
         {
-            Debug.Log(animTime);
             loadingText.text = Mathf.Round(animTime * 100) + " %";
         }
     }

@@ -1,8 +1,5 @@
 fileFormatVersion: 2
-guid: d6bb097da5f984ddfa714adf1c6dd989
-labels:
-- al_max
-- al_max_export_path-MaxSdk/AppLovin/Editor
+guid: 7748a264370f84658948d02578b0258e
 folderAsset: yes
 DefaultImporter:
   externalObjects: {}

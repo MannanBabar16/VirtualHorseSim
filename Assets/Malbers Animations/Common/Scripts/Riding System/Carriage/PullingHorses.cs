@@ -53,7 +53,7 @@ namespace MalbersAnimations.HAP
 
             if (time > 0)
             {
-                RB.velocity = MainAnimal.AdditivePosition / time;
+                RB.linearVelocity = MainAnimal.AdditivePosition / time;
                 var RotationPoint = transform.TransformPoint(RotationOffset);
                 transform.RotateAround(RotationPoint, MainAnimal.UpVector, MainAnimal.HorizontalSmooth * time * MainAnimal.CurrentSpeedModifier.rotation);          //Rotate around Speed
             }

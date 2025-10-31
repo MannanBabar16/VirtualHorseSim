@@ -3,6 +3,7 @@ using MalbersAnimations;
 using System.Collections;
 using System.Collections.Generic;
 using System.Net.NetworkInformation;
+using MangoMango.Advertisement;
 using UnityEngine;
 using UnityEngine.SceneManagement;
 using UnityEngine.UI;
@@ -39,11 +40,6 @@ public class MainMenuHandler : MonoBehaviour
     bool isRewardVideo = false;
     [SerializeField] Text coinText;
 
-    private void OnEnable()
-    {
-        RewardHandler.OnRewardComplete += WatchVideoReward;
-    }
-
     private void Start()
     {
         Time.timeScale = 1;
@@ -68,12 +64,17 @@ public class MainMenuHandler : MonoBehaviour
             AudioManager.instance.StopPlaying("Gameplay");
         }
 
-        if (AdsManager.instance)
+        if (ApplovinAdManager.Instance)
         {
-            AdsManager.instance.Show_AdMob_Banner();
-            if (RewardHandler.instance.isRewardAvailableCheck)
+            ApplovinAdManager.Instance.ShowBanner();
+
+            if (ApplovinAdManager.Instance != null)
             {
                 rewardButton.SetActive(true);
+            }
+            else
+            {
+                rewardButton.SetActive(false);
             }
         }
         
@@ -85,9 +86,9 @@ public class MainMenuHandler : MonoBehaviour
     {
         Button_Click_Sound();
         LoadingPanel.SetActive(true);
-        if (AdsManager.instance)
+        if (ApplovinAdManager.Instance)
         {
-            AdsManager.instance.Show_AdMob_Interstitial();
+            ApplovinAdManager.Instance.ShowInterstitial(RCBool.InterstitialCheckAll);
         }
     }
 
@@ -117,9 +118,10 @@ public class MainMenuHandler : MonoBehaviour
         {
             SettingPanel.SetActive(true);
             isSettingOpen = true;
-            if (AdsManager.instance)
+            
+            if (ApplovinAdManager.Instance)
             {
-                AdsManager.instance.Show_AdMob_Interstitial();
+                ApplovinAdManager.Instance.ShowInterstitial(RCBool.InterstitialCheckAll);
             }
         }
         else if (isSettingOpen)
@@ -191,11 +193,9 @@ public class MainMenuHandler : MonoBehaviour
 
     public void RewardVideo()
     {
-        AdsManager.instance.Show_AdMob_Rewarded();
-    }
-
-    private void OnDisable()
-    {
-        RewardHandler.OnRewardComplete -= WatchVideoReward;
+        ApplovinAdManager.Instance.ShowRewardedAd(() =>
+        {
+            WatchVideoReward();
+        });
     }
 }

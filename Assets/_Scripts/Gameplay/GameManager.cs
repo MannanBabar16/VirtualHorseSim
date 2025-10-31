@@ -4,6 +4,7 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.SceneManagement;
 using MalbersAnimations.Controller;
+using MangoMango.Advertisement;
 /*using DG.Tweening;
 using SWS;*/
 
@@ -246,10 +247,11 @@ public class GameManager : MonoBehaviour
         if (!isPaused)
         {
             UIManager.Instance.PausedPanel.SetActive(true);
-            if (AdsManager.instance)
+            if (ApplovinAdManager.Instance)
             {
-                AdsManager.instance.Show_AdMob_Interstitial();
+                ApplovinAdManager.Instance.ShowInterstitial(RCBool.InterstitialCheckAll);
             }
+            
             Time.timeScale = 0f;
             isPaused = true;
         }
@@ -303,9 +305,9 @@ public class GameManager : MonoBehaviour
         {
             AudioManager.instance.Play("Failed");
         }
-        if (AdsManager.instance)
+        if (ApplovinAdManager.Instance)
         {
-            AdsManager.instance.Show_AdMob_Interstitial();
+            ApplovinAdManager.Instance.ShowInterstitial(RCBool.InterstitialCheckAll);
         }
         Time.timeScale = 0;
     }
@@ -360,10 +362,10 @@ public class GameManager : MonoBehaviour
         UIManager.Instance.loadingPanel.GetComponent<LoadingScreen>().sceneName = SceneManager.GetActiveScene().name;
         UIManager.Instance.loadingPanel.GetComponent<LoadingScreen>().loadObjectInstead = false;
         UIManager.Instance.loadingPanel.SetActive(true);
-        if (AdsManager.instance)
-        {
-            AdsManager.instance.Show_AdMob_Interstitial();
-        }
+         if (ApplovinAdManager.Instance)
+            {
+                ApplovinAdManager.Instance.ShowInterstitial(RCBool.InterstitialCheckAll);
+            }
     }
 
     public void Button_Click_Sound()

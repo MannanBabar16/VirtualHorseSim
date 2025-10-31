@@ -18,7 +18,7 @@ namespace MalbersAnimations.Weapons
 
         public override void OnAnimator_IK(IMWeaponOwner RC)
         {
-            float DeltaTime = RC.Anim.updateMode == AnimatorUpdateMode.AnimatePhysics ? Time.fixedDeltaTime : Time.deltaTime;
+            float DeltaTime = RC.Anim.updateMode == AnimatorUpdateMode.Fixed ? Time.fixedDeltaTime : Time.deltaTime;
 
             bool isRightHand = RC.Weapon.IsRightHanded;
             Vector3 RayOrigin = isRightHand ? RC.RightShoulder.position : RC.LeftShoulder.position;
