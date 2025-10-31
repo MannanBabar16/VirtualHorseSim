@@ -1,7 +1,7 @@
 ﻿<Solution>
   <Project Path="Unity.Timeline.csproj" />
-  <Project Path="UnityEngine.Advertisements.Editor.csproj" />
   <Project Path="Unity.PlasticSCM.Editor.csproj" />
+  <Project Path="UnityEngine.Advertisements.Editor.csproj" />
   <Project Path="Assembly-CSharp.csproj" />
   <Project Path="Unity.Services.Core.Internal.csproj" />
   <Project Path="Unity.VisualScripting.Flow.csproj" />
@@ -26,7 +26,6 @@
   <Project Path="Unity.TextMeshPro.Editor.csproj" />
   <Project Path="Unity.TestTools.CodeCoverage.Editor.OpenCover.Model.csproj" />
   <Project Path="Unity.Rider.Editor.csproj" />
-  <Project Path="Unity.CollabProxy.Editor.csproj" />
   <Project Path="UIEffect.csproj" />
   <Project Path="MaxSdk.Scripts.csproj" />
   <Project Path="Unity.AI.Navigation.Editor.ConversionSystem.csproj" />
@@ -60,10 +59,12 @@
   <Project Path="Unity.Services.RemoteConfig.csproj" />
   <Project Path="Unity.Services.Core.Threading.csproj" />
   <Project Path="Unity.VisualScripting.DocCodeExamples.csproj" />
+  <Project Path="Unity.CollabProxy.Editor.csproj" />
   <Project Path="Unity.Services.Core.Device.csproj" />
   <Project Path="Unity.VisualScripting.Shared.Editor.csproj" />
   <Project Path="Unity.EditorCoroutines.Editor.csproj" />
   <Project Path="Unity.Services.Authentication.Editor.Shared.csproj" />
+  <Project Path="Unity.PlasticSCM.Editor.Entities.csproj" />
   <Project Path="UIEffect-Editor.csproj" />
   <Project Path="Assembly-CSharp-Editor-firstpass.csproj" />
   <Project Path="Unity.RemoteConfig.Editor.Core.csproj" />
